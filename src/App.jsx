@@ -1,14 +1,25 @@
-import CountBox from "./components/CountBox/CountBox"
+import { Suspense } from "react";
 import Footer from "./components/Footer/Footer"
 import IssuesManagement from "./components/IssuesManagement/IssuesManagement"
 import Navbar from "./components/Navbar/Navbar"
 
+
+const fetchData = async () => {
+  const result = await fetch("/data.json");
+  return result.json();
+};
+
 function App() {
+
+  const fetchPromise = fetchData();
 
   return (
     <>
       <Navbar></Navbar>
-      <IssuesManagement></IssuesManagement>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <IssuesManagement fetchPromise={fetchPromise}></IssuesManagement>
+      </Suspense>
+      
       <Footer></Footer>
     </>
   )
