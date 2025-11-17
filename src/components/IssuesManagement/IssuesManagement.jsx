@@ -12,11 +12,13 @@ const IssuesManagement = ({ fetchPromise }) => {
   const [resolvedData, setResolvedData] = useState([]);
 
   const handleClickedCard = (currentData) => {
-    console.log("handle clicked country");
-    const already = selected.find((item) => item.id === currentData.id);
-    if (!already) {
-      setSelected([...selected, currentData]);
+
+    const alreadyClicked = selected.find((item) => item.id === currentData.id);
+
+    if (alreadyClicked) {
+      return;
     }
+    setSelected([...selected, currentData])
   };
 
   return (
@@ -48,6 +50,11 @@ const IssuesManagement = ({ fetchPromise }) => {
               <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
                 Task Status
               </h2>
+
+              {
+              selected.length == 0 && <h2 className="text-[#627382]">Select a ticket to add to Task Status</h2>
+              }
+
               {selected.map((clickedData) => {
                 return (
                   <TaskStatus
@@ -67,6 +74,9 @@ const IssuesManagement = ({ fetchPromise }) => {
               <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
                 Resolved Task
               </h2>
+              {
+              resolvedData.length == 0 && <h2 className="text-[#627382]">No resolved tasks yet.</h2>
+              }
               {resolvedData.map((resData) => {
                 return <ResolvedTask resData={resData}></ResolvedTask>;
               })}

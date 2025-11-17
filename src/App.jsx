@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Footer from "./components/Footer/Footer"
 import IssuesManagement from "./components/IssuesManagement/IssuesManagement"
 import Navbar from "./components/Navbar/Navbar"
+import { ToastContainer } from "react-toastify";
 
 
 const fetchData = async () => {
@@ -21,6 +22,7 @@ function App() {
       </Suspense>
       
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
   )
 }

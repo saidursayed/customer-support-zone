@@ -1,11 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
+import { toast } from "react-toastify";
 
 const Card = ({ ticket, handleClickedCard }) => {
   const handleClick = () => {
 
-
+    toast.success("In-Progress!")
     handleClickedCard(ticket)
   };
 

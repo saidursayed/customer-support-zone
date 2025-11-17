@@ -1,8 +1,9 @@
 import React from "react";
+import { toast } from "react-toastify";
 
 const TaskStatus = ({ clickedData, tickets, setTickets, resolvedData, setResolvedData, selected, setSelected }) => {
   const handleResolved = () => {
-
+    toast.success("Completed!")
     setSelected(selected.filter(selectedData => selectedData.id !== clickedData.id));
     setTickets(tickets.filter(ticket => ticket.id !== clickedData.id));
     setResolvedData([...resolvedData, clickedData])
@@ -14,7 +15,7 @@ const TaskStatus = ({ clickedData, tickets, setTickets, resolvedData, setResolve
       <h2 className="font-medium text-lg text-[#001931] mb-4">
         {clickedData.title}
       </h2>
-      <button onClick={handleResolved} className="bg-[#02A53B] w-full text-white py-3 rounded-sm font-semibold">
+      <button onClick={handleResolved} className="bg-[#02A53B] w-full text-white py-3 rounded-sm font-semibold cursor-pointer">
         Complete
       </button>
     </div>
