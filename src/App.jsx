@@ -17,11 +17,14 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
+
       <Suspense fallback={<h2>Loading...</h2>}>
         <IssuesManagement fetchPromise={fetchPromise}></IssuesManagement>
       </Suspense>
       
       <Footer></Footer>
+      
+
       <ToastContainer></ToastContainer>
     </>
   )

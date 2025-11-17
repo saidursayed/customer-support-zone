@@ -22,17 +22,17 @@ const IssuesManagement = ({ fetchPromise }) => {
   };
 
   return (
-    <div className="bg-[#E5E7EB] pb-20">
+    <div className="bg-[#E5E7EB] pb-10 md:pb-20">
       {/* Count Box */}
       <CountBox selected={selected} resolvedData={resolvedData}></CountBox>
 
       <Container>
-        <div className="flex justify-between items-start gap-8">
-          <div className="w-7/10">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 px-8">
+          <div className="w-full md:w-7/10">
             <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
               Customer Tickets
             </h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 ">
               {tickets.map((ticket) => {
                 return (
                   <Card
@@ -45,7 +45,7 @@ const IssuesManagement = ({ fetchPromise }) => {
             </div>
           </div>
 
-          <div className="w-3/10">
+          <div className="w-full md:w-3/10">
             <div>
               <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
                 Task Status
@@ -70,7 +70,7 @@ const IssuesManagement = ({ fetchPromise }) => {
               })}
             </div>
 
-            <div className="mt-10">
+            <div className="mt-4 md:mt-10">
               <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
                 Resolved Task
               </h2>

@@ -11,9 +11,9 @@ const Footer = () => {
               CS — Ticket System
             </h3>
             <p className="text-sm">
-              PH Assignment system is a platform that centralizes, tracks, and
-              manages requests or issues, converting them into unique
-              "Assignment s" for efficient resolution and communication
+              A fast and reliable customer support ticket system designed to
+              track issues, manage tasks, and resolve queries efficiently with a
+              smooth and user-friendly experience.
             </p>
           </div>
           <div>
