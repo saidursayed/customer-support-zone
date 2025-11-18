@@ -35,9 +35,9 @@ const Card = ({ ticket, handleClickedCard }) => {
           <span className="text-[#627382]">{ticket.id}</span>
           <span
             className={`${
-              ticket.priority == "HIGH PRIORITY"
-                ? "text-[#f83044]"
-                : "text-[#febb0c]"
+              ticket.priority == "HIGH PRIORITY" && "text-[#f83044]"
+            } ${ticket.priority == "MEDIUM PRIORITY" && "text-[#febb0c]"} ${
+              ticket.priority == "LOW PRIORITY" && "text-[#02a53b]"
             }`}
           >
             {ticket.priority}

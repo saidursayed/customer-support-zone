@@ -88,5 +88,50 @@
     "priority": "MEDIUM PRIORITY",
     "status": "Open",
     "createdAt": "1/24/2024"
+  },
+  {
+    "id": "#1011",
+    "title": "Cannot Reset Password",
+    "description": "Customer tries to reset their password but never receives the reset email.",
+    "customer": "Ethan White",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "1/25/2024"
+  },
+  {
+    "id": "#1012",
+    "title": "App Notifications Not Working",
+    "description": "Customer is not receiving app notifications on iOS 16 device.",
+    "customer": "Mia Harris",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "1/26/2024"
+  },
+  {
+    "id": "#1013",
+    "title": "Error 404 on Help Page",
+    "description": "Customer reports that the help/support page returns a 404 error.",
+    "customer": "Noah Clark",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "1/27/2024"
+  },
+  {
+    "id": "#1014",
+    "title": "Unable to Apply Discount Code",
+    "description": "Customer tries to apply a discount code during checkout but it keeps showing invalid.",
+    "customer": "Ava Lewis",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "1/28/2024"
+  },
+  {
+    "id": "#1015",
+    "title": "Slow Loading Dashboard",
+    "description": "Customer complains that the dashboard takes too long to load after login.",
+    "customer": "William Robinson",
+    "priority": "LOW PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "1/29/2024"
   }
 ]
