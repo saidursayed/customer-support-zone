@@ -91,7 +91,7 @@ const Navbar = () => {
               </li>
             </ul>
             <div>
-              <button className=" bg-linear-[125deg,#632EE3,#9F62F2] font-semibold text-white px-4 py-2 md:py-3 rounded-sm hover:cursor-pointer">
+              <button className=" bg-linear-[125deg,#632EE3,#9F62F2] font-semibold text-white px-3 md:px-4 py-2 md:py-3 rounded-sm hover:cursor-pointer">
                 + New Ticket
               </button>
             </div>

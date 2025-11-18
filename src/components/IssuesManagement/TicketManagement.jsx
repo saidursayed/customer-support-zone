@@ -4,6 +4,7 @@ import Container from "../Container/Container";
 import Card from "../Card/Card";
 import TaskStatus from "../TaskStatus/TaskStatus";
 import ResolvedTask from "../ResolvedTask/ResolvedTask";
+import { toast } from "react-toastify";
 
 const TicketManagement = ({ fetchPromise }) => {
   const fetchData = use(fetchPromise);
@@ -16,8 +17,11 @@ const TicketManagement = ({ fetchPromise }) => {
     const alreadyClicked = selected.find((item) => item.id === currentData.id);
 
     if (alreadyClicked) {
+      toast.warning("Already in progress!");
       return;
     }
+    
+    toast.success("In-Progress!");
     setSelected([...selected, currentData])
   };
 

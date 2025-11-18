@@ -1,17 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
-import { toast } from "react-toastify";
 
 const Card = ({ ticket, handleClickedCard }) => {
   const handleClick = () => {
-
-    toast.success("In-Progress!")
-    handleClickedCard(ticket)
+    handleClickedCard(ticket);
   };
 
   return (
-    <div className="bg-white rounded-sm p-4 cursor-pointer" onClick={handleClick}>
+    <div
+      className="bg-white rounded-sm p-4 cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="flex justify-between items-center">
         <h2 className="font-medium md:text-lg pr-2 md:pr-0 ">{ticket.title}</h2>
         <div
@@ -26,7 +26,7 @@ const Card = ({ ticket, handleClickedCard }) => {
               ticket.status == "Open" ? "bg-[#02A53B]" : "bg-[#FEBB0C]"
             }`}
           ></span>
-          <span className={`text-xs md:text-base`} >{ticket.status}</span>
+          <span className={`text-xs md:text-base`}>{ticket.status}</span>
         </div>
       </div>
       <p className="mt-3 mb-4 text-[#627382]">{ticket.description}</p>
