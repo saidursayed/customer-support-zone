@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Footer from "./components/Footer/Footer"
-import IssuesManagement from "./components/IssuesManagement/IssuesManagement"
+import TicketManagement from "./components/IssuesManagement/TicketManagement"
 import Navbar from "./components/Navbar/Navbar"
 import { ToastContainer } from "react-toastify";
 
@@ -19,11 +19,11 @@ function App() {
       <Navbar></Navbar>
 
       <Suspense fallback={<h2>Loading...</h2>}>
-        <IssuesManagement fetchPromise={fetchPromise}></IssuesManagement>
+        <TicketManagement fetchPromise={fetchPromise}></TicketManagement>
       </Suspense>
       
       <Footer></Footer>
-      
+
 
       <ToastContainer></ToastContainer>
     </>

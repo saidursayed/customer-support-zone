@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 import TaskStatus from "../TaskStatus/TaskStatus";
 import ResolvedTask from "../ResolvedTask/ResolvedTask";
 
-const IssuesManagement = ({ fetchPromise }) => {
+const TicketManagement = ({ fetchPromise }) => {
   const fetchData = use(fetchPromise);
   const [tickets, setTickets] = useState(fetchData);
   const [selected, setSelected] = useState([]);
@@ -27,7 +27,7 @@ const IssuesManagement = ({ fetchPromise }) => {
       <CountBox selected={selected} resolvedData={resolvedData}></CountBox>
 
       <Container>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 px-8">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 md:px-0 px-8">
           <div className="w-full md:w-7/10">
             <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
               Customer Tickets
@@ -88,4 +88,4 @@ const IssuesManagement = ({ fetchPromise }) => {
   );
 };
 
-export default IssuesManagement;
+export default TicketManagement;
