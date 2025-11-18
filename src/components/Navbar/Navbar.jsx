@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="bg-white">
       <Container>
-        <div className="navbar md:py-4 flex justify-between px-8 md:px-0">
+        <div className="navbar md:py-4 flex justify-between px-4 md:px-0">
           <div className="flex items-center gap-1">
             <div className="dropdown">
               <div

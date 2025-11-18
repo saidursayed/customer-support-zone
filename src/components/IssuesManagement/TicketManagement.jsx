@@ -27,7 +27,7 @@ const TicketManagement = ({ fetchPromise }) => {
       <CountBox selected={selected} resolvedData={resolvedData}></CountBox>
 
       <Container>
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 md:px-0 px-8">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center md:items-start gap-4 md:gap-8 md:px-0 px-4">
           <div className="w-full md:w-7/10">
             <h2 className="font-semibold text-2xl text-[#34485a] mb-4">
               Customer Tickets
